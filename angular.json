@@ -122,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "apic-demo-ui"
+  "defaultProject": "apic-demo-ui",
+  "cli": {
+    "analytics": false
+  }
 }
