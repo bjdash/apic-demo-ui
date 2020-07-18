@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --header-bg: #e1e1e1;
+    --main-bg: #efefef;
+    --text-color: #666666;
+    --text-color-bold: #333333;
+    --content-bg: #fff;
+    --content-bg-contrast: #e1e1e1;
+    --accent-color: #2196f3;
+    --accent-bg-text: #ffffff;
+    --accent-shadow: #2196f34d;
+    --border-color: #ccc;
+    --input-bg: '#d1ebff';
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: var(--main-bg);
+}
+
+.container {
+    padding: 10px;
+}
+
+.flex {
+    display: flex !important;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.full {
+    width: 100%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.mat-toolbar {
+    background-color: var(--header-bg) !important;
+    box-shadow: 0 7px 9px rgba(0, 0, 0, 0.1);
+}
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+    margin-top: 0 !important;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: var(--accent-color);
+    animation: spinner .8s linear infinite;
+}
