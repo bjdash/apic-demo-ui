@@ -18,8 +18,14 @@
                             <mat-label>Todo Name</mat-label>
                             <input type="text" matInput placeholder="User name" formControlName="name" />
                         </mat-form-field>
-                        <button type="submit" style="width: 52px;height: 52px;" mat-stroked-button color="accent">
+                        <button type="submit" style="width: 52px;height: 52px;" [class.spinner]="flags.adding"
+                            [disabled]="flags.adding" mat-stroked-button color="accent">
                             <mat-icon>done_all</mat-icon>
+                        </button>
+                        <button type="button" (click)="getTodos()" style="width: 52px;height: 52px;"
+                            [class.spinner]="flags.getting" [disabled]="flags.getting" mat-stroked-button
+                            color="primary">
+                            <mat-icon>refresh</mat-icon>
                         </button>
                     </div>
                 </form>
@@ -29,7 +35,8 @@
                     <div *ngFor="let todo of todos">
                         <mat-list-item>
                             <div mat-line>{{todo.name}}</div>
-                            <button (click)="deleteTodo(todo.id)" type="button" mat-icon-button color="warn"
+                            <button (click)="deleteTodo(todo.id)" [class.spinner]="flags.deleting"
+                                [disabled]="flags.deleting" type="button" mat-icon-button color="warn"
                                 aria-label="Delete todo">
                                 <mat-icon>delete</mat-icon>
                             </button>
