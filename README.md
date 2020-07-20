@@ -1,6 +1,6 @@
 # Apic Demo Ui
 
-This is a demo project built to demonstrate some of the best features of [APIC](https://apic.app), specially the User Session recorder and how to import and test APIs from a real user session. To view the application headover https://apic.app/demo
+This is a demo project built to demonstrate some of the best features of [APIC](https://apic.app), specially the [User Session recorder](https://docs.apic.app/capture-and-test-api-from-real-user-sessions) and how to import and test APIs from a real user session. To view the application headover https://apic.app/demo
 
 ## Development
 
